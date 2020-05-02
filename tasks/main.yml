@@ -1,0 +1,19 @@
+---
+- name: Setup smoothy shell
+  copy: >
+    src={{ item.src }}
+    dest={{ item.dst }}
+    owner={{ item.own | default('root') }}
+    group={{ item.grp | default('root') }}
+    mode={{ item.mode | default('0755') }}
+  with_items:
+    - "{{ bash_ps }}"
+  when: item is defined
+
+- lineinfile:
+    path: "~{{ item }}/.bashrc"
+    line: 'source /etc/profile'
+    create: yes
+  with_items:
+    - "{{ bash_ps_users }}"
+  when: item is defined

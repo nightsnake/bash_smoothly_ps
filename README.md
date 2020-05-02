@@ -1,8 +1,15 @@
 # Awesome Bash PS1
 
-### HowToUse
+Completed ansible role for Awesome Bash PS1
 
-- sudo cp ./bash_prompt.sh /etc/profile.d/
-- echo 'source /etc/proflie' >> ~/.bashrc
+### Example playbook
+
+```
+- hosts: all
+  become: yes
+  gather_facts: no
+  roles:
+    - { role: bash_smoothy_ps1 }
+```
 
 reopen/relogin into terminal (tty/ptty)

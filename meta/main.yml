@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: Aleksey Uchakin a.k.a. Night_Snake
+  description: Install smoothy shell (thanks to Rj45)
+  company: Nixman.info
+  min_ansible_version: 2.6.5
+  github_branch:
+  - name: Ubuntu
+    versions:
+    - xenial
+    - bionic
+    - name: CentOS
+      versions:
+        - 7

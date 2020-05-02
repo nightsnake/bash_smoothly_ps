@@ -1,0 +1,8 @@
+---
+bash_ps:
+  - src: 'bash_prompt.sh'
+    dst: '/etc/profile.d/'
+    mode: '0755'
+
+bash_ps_users:
+  - root
